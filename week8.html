@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Tech Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Tech Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Latest Post: Why I Love Coding</h2>
+      <p>Welcome to my blog! Here I share thoughts on technology, coding, and web development.</p>
+      <button id="readMoreBtn">Read More</button>
+      <p id="moreText" style="display: none;">Here’s a deep dive into my passion for building with code...</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vincent's Blog. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript interactivity
+    document.getElementById("readMoreBtn").addEventListener("click", () => {
+      const moreText = document.getElementById("moreText");
+      moreText.style.display = moreText.style.display === "none" ? "block" : "none";
+    });
+  </script>
+</body>
+</html>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, nav, main, article, footer {
+    padding: 1em;
+  }
+  
+  header {
+    background: #333;
+    color: #fff;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  article {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  footer {
+    background: #f2f2f2;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+  }
+  
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+    }
+  }
+  
